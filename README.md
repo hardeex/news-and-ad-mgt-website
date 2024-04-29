@@ -1,6 +1,3 @@
-# news-and-ad-mgt-website
-This repository contains the source code for a modern news website built with Laravel, a powerful PHP framework. The website offers a comprehensive platform for publishing, managing, and consuming news articles across various categories.
-
 
 📰 Laravel News Website
 
@@ -18,7 +15,7 @@ This repository contains the source code for a modern news website built with La
 - SEO Optimized: Implement best practices for search engine optimization to improve visibility in search results.
 
 
-🛠️  Technologies Used:
+🛠️ Technologies Used:
 
 - Laravel: PHP framework for building robust web applications.
 - MySQL: Relational database management system for storing article data.
@@ -27,7 +24,7 @@ This repository contains the source code for a modern news website built with La
 - Bootstrap: Frontend framework for designing consistent and visually appealing layouts.
 - Composer: Dependency manager for PHP to manage project dependencies.
 
-👨<200d>💻 Getting Started:
+👨‍💻 Getting Started:
 
 1. Clone the repository: `git clone https://github.com/hardeex/news-and-ad-mgt-website.git`
 2. Install dependencies: `composer install`
@@ -46,5 +43,4 @@ This repository contains the source code for a modern news website built with La
 📝 Contributing:
 
 Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests to help improve this project.
-
 

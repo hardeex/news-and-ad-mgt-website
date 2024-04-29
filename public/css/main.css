@@ -1,0 +1,1724 @@
+/*
+    Developer - Adewale
+    Developer means of contact - webmasterjdd@gmail.com, +2348148413982
+    Project Github Link: https://github.com/hardeex/e-news-podcast-movies
+    Documentation Link:
+    Styling the common element acroos all the pages
+
+
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 248, 248);
+}
+
+section{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3rem;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+    transition: background-color 0.3s
+}
+
+h3{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* For WebKit browsers targetting the scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: darkblue;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+
+
+
+/* Style the header */
+header {
+    background-color: darkblue;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the navigation menu */
+
+.hidden {
+    display: none;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(108, 108, 226);
+    color: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 25px;
+}
+
+.toggle-menu {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#menu-toggle {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+/* Style the images */
+
+header img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+
+ .form {
+    position: relative;
+}
+
+ .form input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 35px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 5px 3px black;
+    position: relative;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 35px 35px 0;
+    background: red;
+    color: white;
+    font-size: 10px;
+}
+/* ==== End of Styling the form */
+
+
+.anchor {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.anchor:hover {
+    background-color: #f44336;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .anchor {
+        padding: 8px 16px;
+    }
+}
+
+
+/*** === STYELING THE EXCHANGE RATE CONTAINER */
+
+.exchange-rate-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exchange-rate-list li {
+    position: relative;
+    margin-right: 20px;
+
+    animation: scrollItems 10s linear infinite;
+}
+
+.exchange-rate-list li::before,
+.exchange-rate-list li::after {
+    content: "|";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.exchange-rate-list li::before {
+    left: -20px;
+}
+
+.exchange-rate-list li::after {
+    right: -20px;
+}
+
+/* Animation */
+@keyframes scrollItems {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/*** FOOOTER **/
+
+footer{
+
+    margin: 50px;
+}
+
+
+
+.subscriber {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.subscriber img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.subscribe-form h6 {
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+.subscribe-form p {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+}
+
+
+.footer {
+    background-color: darkblue;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+.footer form{
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+}
+
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(250, 241, 241);
+}
+
+.about-us-footer {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+.about-us-footer button{
+   padding: 5px 10px;
+}
+
+
+.quick-links-footer {
+    display: flex;
+    flex: 3;
+}
+
+.link-item {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.link-item h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.link-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-item ul li  {
+    margin-bottom: 5px;
+}
+
+.link-item ul li a {
+
+    color: rgb(243, 230, 230);
+}
+
+.link-item ul li a:hover {
+    color: red;
+}
+
+
+
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+
+
+.social-icons a:hover {
+    color: red;
+}
+
+
+
+/* ======== STYLING THE HOME PAGE == */
+
+.news-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Style for news update slider */
+.update-and-news-slider {
+    flex: 1;
+}
+
+/* Style for news update slider */
+.update-and-news-slider {
+    flex: 2;
+}
+
+.update-and-news-slider img {
+    border-radius: 10px;
+}
+
+
+/* Style for news category container */
+
+
+.new-cat {
+    flex: 1 0 calc(30.33% - 10px);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.news-update  {
+    width: 100%;
+
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.news-update a {
+    text-decoration: none;
+    color: gray;
+    transition: background-color 0.3s;
+}
+
+.news-update a:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Style for news headline container */
+.news-headline {
+
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+   cursor: pointer;
+}
+
+
+.news-headline:last-child {
+    margin-bottom: 0;
+}
+
+.news-headline-container {
+    flex: 1;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.news-headline-container h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+
+
+.news-headline-title h2 {
+    margin: 0;
+    color: #333;
+}
+
+
+
+/*==== STYLING THE HOT GIST SECTION ===== */
+.gist-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.local-gist, .international-gist {
+    width: 48%;
+}
+
+.news-content {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-content img {
+    width: 190px;
+    height: 110px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1; /* Allow content to expand to fill available space */
+}
+
+.local-gist p, .international-gist p {
+    margin: 0;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+/* ==== TEXT VID AND AD SECTION ==== */
+.txt-vid-ad-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txt-news, .live-video, .news-ad {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.live-video{
+    flex: 2;
+}
+
+.live-video button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    margin-bottom: 10px;
+}
+
+.live-video video {
+    width: 100%;
+}
+
+.news-ad img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+/* ==== THE NEWS CATEGORY SECTION STYLING ====== */
+/* Style the container */
+
+/* Style for e-news-topics container */
+.e-news-topics {
+    margin-bottom: 20px;
+}
+
+/* Style for top topics header */
+.e-news-topics h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style for each top topic container */
+.top-topic {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style for top topic link */
+.top-topic-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+}
+
+/* Style for top topic image */
+.top-topic-image  {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.top-topic-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style for top topic content */
+.top-topic-content {
+    flex: 1;
+}
+
+/* Style for top topic title */
+.top-topic-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Style for top topic excerpt */
+.top-topic-excerpt {
+    line-height: 1.5;
+    color: #666;
+}
+
+
+
+/*=== TOP NEWS CATEGORY STYLE==== */
+.top-news-category{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+.top-news-category form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.top-news-category input{
+    background-color: black;
+    color: white;
+}
+
+
+
+/*** ===== TOP NEWS CATEGORY STYLING */
+
+/* Style for category item container */
+.cat-item-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+/* Style for category item */
+.cat-item {
+    background-color: rgb(233, 224, 224);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(13% - 10px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Style for category icon */
+.cat-item i {
+    color: red;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Style for category text */
+.cat-item p {
+    margin: 0;
+    color: #333;
+    word-wrap: break-word;
+}
+
+/* Adjust margin for the last item in each row */
+.cat-item:nth-child(7n) {
+    margin-right: 0;
+}
+
+
+/*==== ENTERTAINMENT SECTION === */
+.entertainment-news,
+.more-news {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.more-news {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin-top: 0;
+    overflow-x: auto;
+    width: calc(100% - 30px);
+    padding-top: 30px;
+}
+
+.more-news .more-news-item {
+    flex: 0 0 auto;
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+}
+
+.more-news .more-news-item:last-child {
+    margin-right: 0;
+}
+
+
+.get-entertainment-update,
+.music-news {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.music-news{
+    width: 100% !important;
+    overflow-y: auto;
+    height: 900px;
+    border-bottom: 4px solid black;
+}
+
+.music-news-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music-news-content {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.music-news-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.music-news-info img {
+    width: auto;
+    max-width: 30%;
+
+}
+
+.music-news-desc {
+    flex: 1;
+}
+
+
+
+
+.get-entertainment-update{
+    flex: 3;
+}
+
+
+.featured-news img {
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.featured-news p {
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.featured-news button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured-news button:hover {
+    background-color: #cc0000;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+.entertainment-header{
+    background-color: red;
+
+}
+
+.entertainment-header p{
+    text-transform: uppercase;
+    font-size: 26px;
+    padding-left: 5rem;
+    color: white;
+}
+
+
+/**** ==== RECENT MOVIES CONTAINER =====*/
+.recent-movie-container {
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../news/movie3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 90px;
+    padding: 30px;
+}
+
+
+.movie-title,
+.movie-details {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+}
+
+
+.movie-title{
+    padding-left: 7rem;
+}
+
+
+.movie-details p,
+.movie-title p {
+    margin-bottom: 20px;
+    width: 450px;
+}
+
+.movie-details button {
+    padding: 15px 30px;
+
+}
+
+.stars {
+    color: gold;
+    font-size: 24px;
+}
+
+
+/*=== HANDLING THE MOVIES AND MUSIC DISPLAYS ===*/
+.display-movies,
+.display-music {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: rgb(161, 230, 151);
+}
+
+.movie-item,
+.music-item {
+    flex-shrink: 0;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.movie-item img,
+.music-item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-item p,
+.music-item p {
+    margin-top: 10px;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+}
+
+.music-item img {
+    width: 100px;
+    height: 100px; /* Adjusted height */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.music-item h4,
+.music-item p {
+    margin: 0;
+}
+
+.music-item p {
+    color: #666;
+}
+
+/*****======= STYLEING THE PRIDE OF NIGERIA SECTION ====*/
+
+.pride-of-nigeria{
+    background-color: rgb(208, 236, 208);
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pride-of-nigeria h2, .pride-of-nigeria i{
+    letter-spacing: 15px;
+    color: green;
+}
+
+#pride-btn {
+    color: white;
+    background-color: darkgreen;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: 20px;
+    margin-top: 20px;
+}
+
+#pride-btn:hover{
+    background-color: red;
+}
+
+
+
+.show-pride-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+.pride-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.pride-item img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.pride-txt {
+    padding: 15px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.pride-txt h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.pride-excerpt {
+    margin-top: 10px;
+    background-color: white;
+    font-size: 14px;
+    color: #666;
+}
+
+/*=== OTHER ESSENTIAL ITEMS CONTAINER ****=====*/
+.essential-items-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.e-title{
+    padding-top: 50px;
+}
+
+.essential-item {
+    width: calc(20% - 20px);
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #d4e4b7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.essential-item p {
+    margin: 0;
+}
+
+.essential-item p:first-child {
+    font-weight: bold;
+}
+
+
+
+
+/* Existing styles for REMEMBRANCE SECTION */
+#remembrance {
+    background-color: #CEE9F7;
+    margin-top: 40px;
+}
+
+#remebrance-cat {
+    background-color: #CEE9F7;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-me p {
+    font-weight: bold;
+}
+
+/* Existing styles for FAMILY TREE SECTION */
+.family-tree {
+    background-image: url('../images/family-tree.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    height: 550px;
+}
+
+.family-tree h4 {
+    padding-top: 90px;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.family-tree p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.family-tree-button {
+    display: flex;
+    justify-content: center;
+}
+
+#view-ancestry {
+    color: green;
+    border: 1px solid green;
+    background-color: transparent;
+    padding: 20px;
+    margin-right: 22px;
+    transition: background-color 0.3s ease;
+}
+
+#build-tree-btn {
+    color: white;
+    padding: 5px 10px;
+    background-color: green;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#view-acestry:hover,
+#build-tree-btn:hover {
+    background-color: darkblue;
+    transition: background-color 0.3s;
+}
+ /* Existing styles for REGISTER BIZ ON E-DIRECT SECTION */
+ .register-biz {
+    background: linear-gradient(to right, #FF5733, #FFC300);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.register-caption {
+    max-width: 50%;
+    color: #fff;
+}
+
+.register-caption h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.register-caption p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.register-caption button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #FF5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-caption button:hover {
+    background-color: darkblue;
+    color: #fff;
+}
+ /* Existing styles for HOTEL SECTION */
+ .book-hotel-container {
+    padding: 50px;
+}
+
+.book-hotel-container img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+}
+
+.featured-hotel-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.hotel {
+    flex: 1;
+    background-image: url(../images/hotel6.jpeg);
+    background-size: cover;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hotel h6 {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.hotel button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.hotel button:hover {
+    background-color: darkblue;
+}
+
+.about-hotel {
+    flex: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-hotel h5 {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.about-hotel p {
+    border-bottom: 8px solid red;
+    padding-bottom: 10px;
+}
+
+.hotel-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hotel-images img {
+    width: calc(30% - 10px);
+    margin-bottom: 20px;
+}
+
+/*=== GROUP SECTION STYLING=== */
+.group-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.group-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.group-header .anchor {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.group-header .anchor:hover {
+    background-color: red;
+}
+
+.group-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.group-ad {
+    flex: 1 1 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.group-ad .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.group-ad .description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.group-ad .anchor {
+    display: block;
+    background-color: #ff5722;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.group-ad .anchor:hover {
+    background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+    .group-ad {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/*======= HANDLING THE EROOR AND CAT. PAGE ===*/
+.not-found {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.post {
+    flex: 3;
+    padding: 20px;
+}
+/* Main container styles */
+.aside-container {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    margin-left: 20px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Header styles */
+.aside-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 25px
+}
+
+/* List styles */
+.aside-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List item styles */
+.aside-container li {
+    margin-bottom: 15px;
+}
+
+/* Link styles */
+.aside-container a {
+    text-decoration: none;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+}
+
+.aside-container a:hover {
+    color: #0056b3;
+}
+
+/* Image styles */
+.aside-container img {
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Title styles */
+.aside-container .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+
+/* Style the list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Add some space between the list items */
+.category-list li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* ======= STYLING EACH POST LAYPUT ====*/
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post .meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post .category {
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.post .read-time {
+    color: #666;
+}
+
+.post .excerpt {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #666;
+}
+
+.post .read-more {
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.post .read-more:hover {
+    text-decoration: underline;
+    background-color: darkblue;
+    transform: scale(1.1);
+}
+
+
+/**** STYLING THE CKEDITOR */
+.editor{
+    .ck-editor__editable_inline{
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #pride-btn {
+        font-size: 1.2rem;
+        letter-spacing: 10px;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .toggle-menu {
+        display: none;
+    }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    section{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1.3rem;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        top: auto;
+        left: auto;
+        width: 100%;
+    }
+
+
+
+	 header img {
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .form input {
+        font-size: 16px;
+    }
+
+	.exchange-rate-list {
+        flex-wrap: wrap;
+    }
+
+    .exchange-rate-list li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+	 footer {
+        margin: 30px;
+    }
+
+    .subscriber {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subscriber img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-footer,
+    .quick-links-footer {
+        flex: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .link-item {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+
+
+	 .news-header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-header-container .update-and-news-slider {
+        flex: unset;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+	 .new-cat {
+        flex: 1 0 calc(50% - 10px);
+    }
+
+    .news-headline-container {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+	 .gist-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .local-gist, .international-gist {
+        width: 100%;
+    }
+
+    .txt-vid-ad-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .txt-news, .live-video, .news-ad {
+        flex: unset;
+        width: 100%;
+        margin: 0;
+    }
+
+    .live-video button {
+        margin: 10px 0;
+    }
+
+	 .top-news-category form {
+        width: 70%;
+    }
+
+    .cat-item {
+        width: calc(25% - 10px);
+    }
+
+
+    .entertainment-news,
+    .more-news,
+    .get-entertainment-update,
+    .music-news {
+        flex: 1 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .music-news {
+        height: auto;
+        overflow-y: initial;
+        border-bottom: none;
+    }
+
+    .music-news .music-news-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .more-news .more-news-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .featured-news img {
+        width: 100%;
+    }
+
+    .get-entertainment-update button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .entertainment-header p {
+        padding-left: 1rem;
+    }
+
+
+	.recent-movie-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .movie-title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .movie-details p,
+    .movie-title p {
+        width: auto;
+    }
+
+    .display-movies,
+    .display-music {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .movie-item,
+    .music-item {
+        margin-right: 10px;
+    }
+
+
+    #pride-btn {
+        font-size: 1.5rem;
+        letter-spacing: 15px;
+    }
+
+    .essential-items-container {
+        flex-wrap: wrap;
+    }
+
+    .essential-item {
+        width: calc(50% - 20px);
+    }
+
+
+    .register-biz {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .register-caption {
+        max-width: 100%;
+    }
+
+    .hotel {
+        flex: 100%;
+    }
+
+    .about-hotel {
+        flex: 100%;
+    }
+
+    .hotel-images img {
+        width: 100%;
+    }
+
+    .quick-links-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-item {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

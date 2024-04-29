@@ -1,0 +1,188 @@
+/*
+    Developer - Adewale
+    Contact - webmasterjdd@gmail.com, +2348148413982
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .dashboard {
+    display: flex;
+    height: 100vh;
+  }
+
+  .sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+    background-color: darkblue;
+    color: #fff;
+    padding: 20px;
+  }
+
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 50px;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+  .sidebar ul li a:hover{
+    color:darkorange;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .tabcontent {
+    display: none;
+  }
+
+  .tabcontent h2 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* File Manager Styles */
+  .file-manager {
+    display: flex;
+  }
+
+  .file-manager .sidebar {
+    background-color: black;
+  }
+
+  .file-manager .upload-btn {
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+
+  .file-manager .folders {
+    margin-bottom: 20px;
+  }
+
+  .file-manager .file-list {
+    margin-top: 20px;
+  }
+
+  .file-manager #search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .file-manager ul {
+    list-style-type: none;
+  }
+
+  .file-manager li {
+    margin-bottom: 10px;
+  }
+
+
+ /*** Handling the CRUD STYLE */
+ .container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+@media (min-width: 768px) {
+  .sidebar {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dashboard {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    /* Show sidebar when menu is toggled */
+    .sidebar.open {
+        display: block;
+    }
+
+    /* Adjustments for tabs */
+    .tabcontent {
+        padding: 20px;
+    }
+
+    /* Adjustments for forms */
+    form {
+        max-width: 100%;
+    }
+}
